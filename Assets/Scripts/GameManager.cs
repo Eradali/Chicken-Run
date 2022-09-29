@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         GM = this;      //referencing to this class
 
-        currentLevel1 = level1;
+        currentLevel1 = level1;     //for first time only
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelSpawner()
     {
-        Debug.Log("ok");
+        Debug.Log("Next Level Created");
 
         xSpawnPos = currentLevel1.transform.position.x + 26.5f;
         ySpawnPos = currentLevel1.transform.position.y + (-1.5f);
