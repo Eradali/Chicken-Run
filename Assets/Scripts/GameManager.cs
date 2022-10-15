@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Next Level Created");
 
-        xSpawnPos = currentLevel1.transform.position.x + 26.5f;
-        ySpawnPos = currentLevel1.transform.position.y + (-1.5f);
-        zSpawnPos = currentLevel1.transform.position.z + 196.3f;
+        xSpawnPos = currentLevel1.transform.position.x + 19.33f;
+        ySpawnPos = currentLevel1.transform.position.y + (-1.3f);
+        zSpawnPos = currentLevel1.transform.position.z + 196.5f;
         Vector3 spawnPos = new Vector3(xSpawnPos,ySpawnPos,zSpawnPos);
 
         currentLevel1 = Instantiate(level1, spawnPos, transform.rotation);
