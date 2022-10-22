@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //cached ref
-    [SerializeField] Animator chickenAnimator;
+    Animator chickenAnimator;
 
     //config para
     [SerializeField] float input1 = 0;

@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager GM;           //Object for this class
 
     //config para
-    GameObject currentLevel1;               //for adding the cords in current level and spawn a new one
+    GameObject nextLevel1;               //for adding the cords in current level and spawn a new one
+    GameObject currentLevel1;
     float xSpawnPos;
     float ySpawnPos;
     float zSpawnPos;
@@ -32,11 +33,25 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Next Level Created");
 
+        if (nextLevel1 != null)
+        {
+            currentLevel1 = nextLevel1;
+            print("in if");
+        }
+
         xSpawnPos = currentLevel1.transform.position.x + 19.33f;
         ySpawnPos = currentLevel1.transform.position.y + (-1.3f);
         zSpawnPos = currentLevel1.transform.position.z + 196.5f;
         Vector3 spawnPos = new Vector3(xSpawnPos,ySpawnPos,zSpawnPos);
 
-        currentLevel1 = Instantiate(level1, spawnPos, transform.rotation);
+        nextLevel1 = Instantiate(level1, spawnPos, transform.rotation);
+    }
+
+    public Transform[] NextLevelAIPath()
+    {
+        AIPath1 aiPath1;
+        aiPath1 = nextLevel1.GetComponentInChildren<AIPath1>();
+        print("Got AI paths");
+        return aiPath1.patrolPoints;
     }
 }
