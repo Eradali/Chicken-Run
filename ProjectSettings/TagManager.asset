@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - not-bakable
+  - bakable
+  - plane
   - 
   - 
   - 
